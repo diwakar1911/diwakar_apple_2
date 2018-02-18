@@ -1,7 +1,7 @@
 export class Requisition {
     requisition: string;
-    requisition_id: number;
+    requisitionId: number;
     recruiter: string;
-    hiring_manager: string;
-    ispublic: boolean;
+    hiringManager: string;
+    isPublic: boolean;
 }

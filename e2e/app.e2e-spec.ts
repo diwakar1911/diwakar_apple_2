@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('diwakar-apple App', () => {
+describe('apple App', () => {
   let page: AppPage;
 
   beforeEach(() => {

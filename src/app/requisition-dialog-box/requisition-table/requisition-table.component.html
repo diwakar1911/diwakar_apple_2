@@ -26,13 +26,13 @@
       <th class="col3456">Privacy</th>
     </tr>
 
-    <tr *ngFor="let requisition of requisitions | FilterPipe:'recruiter': defaultQuery  | FilterPipe: 'requisition,requisition_id,recruiter,hiring_manager': queryString | slice: (curPage * pageSize) - pageSize: curPage * pageSize ;  let i = index ; let l = count" #filteredRows >
-      <td class="col1"><input type="checkbox" [(ngModel)]="requisition.checked" (ngModelChange)="changed(requisition.requisition_id )"></td>
+    <tr *ngFor="let requisition of requisitions | aeFilterPipe:'recruiter': defaultQuery  | aeFilterPipe: 'requisition,requisition_id,recruiter,hiring_manager': queryString | slice: (curPage * pageSize) - pageSize: curPage * pageSize ;  let i = index ; let l = count" #filteredRows >
+      <td class="col1"><input type="checkbox" [(ngModel)]="requisition.checked" (ngModelChange)="changed(requisition.requisitionId )"></td>
       <td class="col2" style="color: #479dd6;">{{ requisition.requisition }}</td>
       <td class="col3456">{{ requisition.requisition_id }}</td>
       <td class="col3456" class="col6">{{ requisition.recruiter }}</td>
       <td class="col3456">{{ requisition.hiring_manager }}</td>
-      <td class="col3456">{{ requisition.ispublic == true ? 'public' : 'confidential' }}</td>
+      <td class="col3456">{{ requisition.isPublic == true ? 'public' : 'confidential' }}</td>
     </tr>
   </table>
   <p class="pagination">
