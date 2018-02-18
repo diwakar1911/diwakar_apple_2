@@ -1,1 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face { font-family: "myriad-set-pro_thin"; src: url("../node_modules/myriad-font/fonts/myriad/myriad-set-pro_thin.woff"); }
+@font-face { font-family: "myriad-set-pro_text"; src: url("../node_modules/myriad-font/fonts/myriad/myriad-set-pro_text.woff"); }
+

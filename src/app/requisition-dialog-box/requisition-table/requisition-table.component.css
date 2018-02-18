@@ -1,0 +1,123 @@
+.btn{
+  font-family: myriad-set-pro_text;
+  font-size: 14px;
+  height:36px;
+  padding: 0px 16px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #7b7b7b;
+  margin: 0px;
+  color: #7b7b7b;
+
+}
+
+.btn-left{
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.btn-right{
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-left:-4px
+}
+
+.btn-active{
+  color: white;
+  background: linear-gradient(#439fe7, #1279c9 );
+  border: 1px solid #1279c9;
+}
+
+#btn-group{
+  margin-bottom: 30px;
+}
+
+
+#table-container{
+  text-align: center;
+  position: relative;
+  margin: 26px;
+}
+
+
+input[type="text"]{
+  width: calc(100% - 40px);
+  height: 40px;
+  margin: 0px;
+  padding: 0px 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: 1px solid #D6D6D6;
+  box-sizing : border-box;
+  float: left;
+}
+
+input[type="text"][placeholder] {
+  font-size: 18px;
+  color: #b7b7b7;
+  font-family: myriad-set-pro_text;
+
+}
+
+table
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  table-layout:fixed;
+  border-collapse:collapse;
+  text-align: left;
+}
+
+tr{
+  height: 60px;
+  font-family: myriad-set-pro_text;
+  font-size: 15px;
+  color: #6d6d6d;
+
+}
+
+td{
+  border-bottom: 1pt solid gainsboro;
+}
+
+.col1{
+  width: 60px;
+  text-align: center;
+
+}
+.col2{
+  width: 290px;
+}
+
+.col3456{
+  width: 145px;
+}
+
+#table-head{
+  background-color: #f5f6f7;
+  font-family: myriad-set-pro_text;
+  font-size: 17px;
+
+}
+
+#search-icon{
+  height: 40px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  display: inline;
+  float: right;
+}
+
+#table-info{
+  font-family: myriad-set-pro_text;
+  font-size: 12px;
+  color: #b7b7b7;
+}
+
+.pagination{
+  font-family: myriad-set-pro_text;
+  color: #6d6d6d;
+
+}

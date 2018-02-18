@@ -1,0 +1,45 @@
+<div id="table-container">
+  <div id="btn-group">
+    <button class="btn btn-left " [ngClass]="{'btn-active': reqBtnActive }" (click)="myReqClick()">My Requisitions</button>
+    <button class="btn btn-right" [ngClass]="{'btn-active': !reqBtnActive }" (click)="onAllclick()">All Requisitions</button>
+  </div>
+
+  <div>
+    <input type="text" [(ngModel)]="queryString" id="search" placeholder="Search by Requisition Name, Requisition ID, Recruiter, Hiring Manager">
+    <img id="search-icon" src="../../assets/search.png">
+  </div>
+
+  <div id="table-info">
+    <p style="float: left">{{checkcount}} Requisition Selected</p>
+    <p style="float: right"> {{filterRows?.length}} of {{requisitions.length}}</p>
+  </div>
+
+
+  <table>
+    <tr id="table-head">
+
+      <th class="col1"></th>
+      <th class="col2">Requisition</th>
+      <th class="col3456">Requisition ID</th>
+      <th class="col3456">Recruiter</th>
+      <th class="col3456">Hiring Manager</th>
+      <th class="col3456">Privacy</th>
+    </tr>
+
+    <tr *ngFor="let requisition of requisitions | FilterPipe:'recruiter': defaultQuery  | FilterPipe: 'requisition,requisition_id,recruiter,hiring_manager': queryString | slice: (curPage * pageSize) - pageSize: curPage * pageSize ;  let i = index ; let l = count" #filteredRows >
+      <td class="col1"><input type="checkbox" [(ngModel)]="requisition.checked" (ngModelChange)="changed(requisition.requisition_id )"></td>
+      <td class="col2" style="color: #479dd6;">{{ requisition.requisition }}</td>
+      <td class="col3456">{{ requisition.requisition_id }}</td>
+      <td class="col3456" class="col6">{{ requisition.recruiter }}</td>
+      <td class="col3456">{{ requisition.hiring_manager }}</td>
+      <td class="col3456">{{ requisition.ispublic == true ? 'public' : 'confidential' }}</td>
+    </tr>
+  </table>
+  <p class="pagination">
+    <button class="fa fa-angle-left"  style="border: none " [disabled] ="curPage == 1" (click)="curPage = curPage - 1"></button>
+    <span> <span style="border-radius: 5px; border: solid 1px gainsboro; padding: 0px 6px;">{{curPage}}</span>  of {{ numberOfPages() }}</span>
+    <button class="fa fa-angle-right"  style="border: none" [disabled] = "curPage >= requisitions.length/pageSize"
+            (click) ="curPage = curPage + 1"></button>
+  </p>
+
+</div>
